@@ -8,7 +8,27 @@
   box-sizing: border-box;
 }
 
-div, p {
+body {
+  color: var(--primary-text-color);
+}
+
+:root {
+  /* BACKGROUND */
+  --bg-theme: #313131;
+  --bg-sidebar: #3d3d3d;
+  --bg-menu: #425061;
+  --bg-field: #f7f8f7;
+
+  /* BORDER */
+  --bd-field: #c9c9c9;
+  
+  /* TEXT */
+  --white-text-color: #fff;
+  --primary-text-color: #000;
+}
+
+div,
+p {
   word-break: break-word;
 }
 
@@ -21,7 +41,7 @@ div[contenteditable] {
 }
 
 div[contenteditable][placeholder]:empty::before {
-  content: attr(placeholder);
-  width: auto;
+  content: attr(aria-placeholder);
   opacity: 0.5;
+  width: auto;
 }
