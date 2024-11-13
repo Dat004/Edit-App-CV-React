@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div, p {
+  word-break: break-word;
+}
+
+div[contenteditable] {
+  border: none;
+  outline: none;
+  cursor: text;
+  display: inline-block;
+  width: 100%;
+}
+
+div[contenteditable][placeholder]:empty::before {
+  content: attr(placeholder);
+  width: auto;
+  opacity: 0.5;
+}
