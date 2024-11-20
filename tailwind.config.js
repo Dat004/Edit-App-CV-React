@@ -5,6 +5,10 @@ export default {
 
   theme: {
     extend: {
+      screens: {
+        hht: { max: "1023px" },
+        hhp: { max: "768px" }
+      },
       backgroundColor: {
         primary: "var(--bg-primary)",
         sidebar: "var(--bg-sidebar)",
@@ -16,12 +20,13 @@ export default {
       },
       textColor: {
         "primary-text": "var(--primary-text-color)",
+        "second-text": "var(--second-text-color)",
         "items-text": "var(--items-text-color)",
         "white-text": "var(--white-text-color)",
       },
       borderColor: {
         field: "var(--bd-field)",
-      }
+      },
     },
   },
 
