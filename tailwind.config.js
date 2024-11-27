@@ -7,7 +7,7 @@ export default {
     extend: {
       screens: {
         hht: { max: "1023px" },
-        hhp: { max: "768px" }
+        hhp: { max: "768px" },
       },
       backgroundColor: {
         primary: "var(--bg-primary)",
@@ -18,6 +18,9 @@ export default {
         field: "var(--bg-field)",
         menu: "var(--bg-menu)",
       },
+      outlineColor: {
+        items: "var(--items-color)",
+      },
       textColor: {
         "primary-text": "var(--primary-text-color)",
         "second-text": "var(--second-text-color)",
@@ -25,6 +28,7 @@ export default {
         "white-text": "var(--white-text-color)",
       },
       borderColor: {
+        separator: "var(--bd-separator)",
         field: "var(--bd-field)",
       },
     },

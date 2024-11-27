@@ -1,55 +1,52 @@
 import {
-  FontFormatTextIcon,
   BackgroundIcon,
-  TemplateIcon,
+  DownloadIcon,
+  FontFormatTextIcon,
   PersonIcon,
+  TemplateIcon,
   ZoomInIcon,
   ZoomOutIcon,
-  DownloadIcon,
 } from "../../../../icons";
+import ProfilePhotoMenu from "./Menu/ProfilePhotoMenu";
 import Button from "../../../../components/Button";
+import BackgroundMenu from "./Menu/BackgroundMenu";
+import TemplatesMenu from "./Menu/TemplatesMenu";
+import ToggleMenu from "./Menu/ToggleMenu";
+import FontMenu from "./Menu/FontMenu";
 
 function BarMenuLayout() {
   return (
     <section className="fixed flex items-center justify-center h-[46px] mt-[16px] top-0 left-0 right-[30vw] hht:right-0 z-[999]">
       <div className="flex items-center h-full rounded-full bg-[#425061]">
         <section className="flex items-center pl-[14px]">
-          <section className="px-[12px]">
-            <Button
-              className="text-[14px] hover:text-second-text"
-              leftIcon
-              icon={<FontFormatTextIcon />}
-            >
-              <span className="hhp:hidden">Phông chữ</span>
-            </Button>
-          </section>
-          <section className="px-[12px]">
-            <Button
-              className="text-[14px] hover:text-second-text"
-              leftIcon
-              icon={<BackgroundIcon />}
-            >
-              <span className="hhp:hidden">Màu sắc</span>
-            </Button>
-          </section>
-          <section className="px-[12px]">
-            <Button
-              className="text-[14px] hover:text-second-text"
-              leftIcon
-              icon={<TemplateIcon />}
-            >
-              <span className="hhp:hidden">Mẫu CV</span>
-            </Button>
-          </section>
-          <section className="px-[12px]">
-            <Button
-              className="text-[14px] hover:text-second-text"
-              leftIcon
-              icon={<PersonIcon />}
-            >
-              <span className="hhp:hidden">Ảnh hồ sơ</span>
-            </Button>
-          </section>
+          <ToggleMenu
+            className="px-[12px]"
+            id={0}
+            label="Phông chữ"
+            Menu={<FontMenu />}
+            Icon={<FontFormatTextIcon />}
+          />
+          <ToggleMenu
+            className="px-[12px]"
+            id={1}
+            label="Màu sắc"
+            Menu={<BackgroundMenu />}
+            Icon={<BackgroundIcon />}
+          />
+          <ToggleMenu
+            className="px-[12px]"
+            id={2}
+            label="Mẫu CV"
+            Menu={<TemplatesMenu />}
+            Icon={<TemplateIcon />}
+          />
+          <ToggleMenu
+            className="px-[12px]"
+            id={3}
+            label="Ảnh hồ sơ"
+            Menu={<ProfilePhotoMenu />}
+            Icon={<PersonIcon />}
+          />
         </section>
         <section className="flex items-center pl-[12px] pr-[6px]">
           <section>

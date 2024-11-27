@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: var(--primary-text-color);
 }
 
@@ -26,6 +26,10 @@ body {
 
   /* BORDER */
   --bd-field: #c9c9c9;
+  --bd-separator: #3c4d58;
+
+  /* OUTLINE */
+  --items-color: #1dbfaf;
 
   /* TEXT */
   --white-text-color: #fff;
