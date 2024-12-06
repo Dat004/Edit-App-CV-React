@@ -6,19 +6,27 @@ import {
   UnderlineTextFormatIcon,
   ItalicTextFormatIcon,
   ListTextFormatIcon,
-} from "../icons";
-import Button from "./Button";
+} from "../../icons";
+import Button from "../Button";
 
-function TextField({ className, isFocus = false, placeholder = "Enter" }) {
+function TextField({
+  className,
+  isFocus = false,
+  simpleFocus = false,
+  placeholder = "Enter",
+  ...props
+}) {
   const [isActive, setIsActive] = useState(false);
   const textFieldRef = useRef(null);
   const toolbarRef = useRef(null);
 
   const textFieldClasses = classNames(
-    "px-[5px] w-full border-[2px] border-solid border-transparent hover:bg-field",
+    "text-[100%] w-full border-[1px] border-solid border-transparent group-hover/field:bg-field",
     {
       [className]: className,
-      "border-field": isFocus,
+      "!border-field": isFocus || (isActive && simpleFocus),
+      "bg-white px-[6px] mx-[-6px]": isActive,
+      "px-[3%] mx-[-3%]": !isActive,
     }
   );
 
@@ -69,12 +77,15 @@ function TextField({ className, isFocus = false, placeholder = "Enter" }) {
         </div>
       )}
       <div
+        tabIndex={-1}
         className={textFieldClasses}
+        placeholder={placeholder}
         ref={textFieldRef}
+        spellCheck="false"
         contentEditable
         aria-multiline
         role="textbox"
-        aria-placeholder={placeholder}
+        {...props}
       ></div>
     </section>
   );

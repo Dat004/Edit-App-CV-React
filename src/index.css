@@ -50,7 +50,13 @@ div[contenteditable] {
 }
 
 div[contenteditable][placeholder]:empty::before {
-  content: attr(aria-placeholder);
+  content: attr(placeholder);
   opacity: 0.5;
   width: auto;
+}
+
+button, input {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
