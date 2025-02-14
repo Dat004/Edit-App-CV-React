@@ -24,6 +24,40 @@ import enfoldTemplate from "../assets/images/templates/enfold.png";
 import messageTemplate from "../assets/images/templates/message.png";
 import newsweekTemplate from "../assets/images/templates/newsweek.png";
 
+import {
+  BoldTextFormatIcon,
+  UnderlineTextFormatIcon,
+  ItalicTextFormatIcon,
+  ListTextFormatIcon,
+} from "../icons";
+
+export const formatTextConfig = [
+  {
+    id: 1,
+    icon: BoldTextFormatIcon,
+    value: "bold",
+    type: "bold",
+  },
+  {
+    id: 2,
+    icon: UnderlineTextFormatIcon,
+    value: "underline",
+    type: "underline",
+  },
+  {
+    id: 3,
+    icon: ItalicTextFormatIcon,
+    value: "italic",
+    type: "italic",
+  },
+  {
+    id: 4,
+    icon: ListTextFormatIcon,
+    value: "insertUnorderedList",
+    type: "unorderedList",
+  },
+];
+
 export const templateDataConfig = [
   {
     id: 1,

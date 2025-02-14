@@ -20,6 +20,7 @@ export default {
       },
       outlineColor: {
         items: "var(--items-color)",
+        field: "var(--bd-field)",
       },
       textColor: {
         "primary-text": "var(--primary-text-color)",

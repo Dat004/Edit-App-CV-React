@@ -1,12 +1,12 @@
 import { useState } from "react";
-
-import { SimpleTemplate } from "../../../../components/Templates";
+import TextFieldWrapper from "../../../../components/TextField/TextFieldWrapper";
+import TextField from "../../../../components/TextField";
 
 function WorkStation() {
-  const [title, setTitle] = useState("Nguyen Van A - Frontend Development");
+  const [profile, setNameProfile] = useState("Nguyen Van A - Frontend Development");
 
-  const handleChangeTitle = (e) => {
-    setTitle(e.target.value);
+  const handleChangeNameProfile = (e) => {
+    setNameProfile(e.target.value);
   };
 
   return (
@@ -18,19 +18,21 @@ function WorkStation() {
               <section className="w-[400px] mt-[70px] mx-auto mb-[48px]">
                 <input
                   className="py-[2px] text-[18px] text-center text-white-text font-medium w-full"
-                  onChange={handleChangeTitle}
+                  onChange={handleChangeNameProfile}
                   placeholder="Đặt tên hồ sơ"
-                  value={title}
-                  name="title"
+                  value={profile}
+                  name="profile"
+                  id="profile"
                   type="text"
-                  id="title"
                 />
               </section>
               <section>
                 <section className="relative">
                   {/* Start Pages */}
                   <section className="bg-white w-[595px] p-[22px] mt-[20px] mx-auto">
-                    <SimpleTemplate />
+                    <TextFieldWrapper secondTitle>
+                      <TextField placeholder="Vị trí ứng tuyển" simpleFocus />
+                    </TextFieldWrapper>
                   </section>
                   {/* End Page */}
                 </section>

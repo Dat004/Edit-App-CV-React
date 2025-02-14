@@ -38,24 +38,38 @@ body {
   --second-text-color: #1dbfaf;
 }
 
+ol,
+ul,
+dl,
+menu {
+  list-style: initial;
+}
+
 div,
 p {
   word-break: break-word;
 }
 
-div[contenteditable] {
-  outline: none;
+[contentEditable] {
+  outline: 0 solid transparent;
+  border: none;
   cursor: text;
-  display: inline-block;
 }
 
-div[contenteditable][placeholder]:empty::before {
+[contentEditable][placeholder]:empty:before {
   content: attr(placeholder);
+  display: block;
   opacity: 0.5;
-  width: auto;
 }
 
-button, input {
+[contentEditable] ul,
+[contentEditable] ol,
+[contentEditable] dl {
+  padding-left: 1.4em;
+}
+
+button,
+input {
   outline: none;
   border: none;
   background-color: transparent;

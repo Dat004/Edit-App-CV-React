@@ -1,4 +1,4 @@
-export const BoldTextFormatIcon = ({ width = "22px", height = "22px" }) => (
+export const BoldTextFormatIcon = ({ width = "15px", height = "15px" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -11,8 +11,8 @@ export const BoldTextFormatIcon = ({ width = "22px", height = "22px" }) => (
 );
 
 export const UnderlineTextFormatIcon = ({
-  width = "22px",
-  height = "22px",
+  width = "15px",
+  height = "15px",
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export const UnderlineTextFormatIcon = ({
   </svg>
 );
 
-export const ItalicTextFormatIcon = ({ width = "22px", height = "22px" }) => (
+export const ItalicTextFormatIcon = ({ width = "15px", height = "15px" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -39,7 +39,7 @@ export const ItalicTextFormatIcon = ({ width = "22px", height = "22px" }) => (
   </svg>
 );
 
-export const ListTextFormatIcon = ({ width = "22px", height = "22px" }) => (
+export const ListTextFormatIcon = ({ width = "15px", height = "15px" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
