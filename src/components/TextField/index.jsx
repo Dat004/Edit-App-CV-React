@@ -1,17 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import classNames from "classnames";
-// import { EditorContent, useEditor } from "@tiptap/react";
-// import Underline from "@tiptap/extension-underline";
-// import StarterKit from "@tiptap/starter-kit";
 
-import {
-  BoldTextFormatIcon,
-  UnderlineTextFormatIcon,
-  ItalicTextFormatIcon,
-  ListTextFormatIcon,
-} from "../../icons";
 import ToolBar from "./ToolBar";
-import Button from "../Button";
 
 function TextField({
   className,
@@ -24,7 +14,7 @@ function TextField({
   const textFieldRef = useRef(null);
 
   const textFieldClasses = classNames(
-    "text-[100%] group-hover/field:bg-field",
+    "inline-block w-full text-[100%] group-hover/field:bg-field",
     {
       [className]: className,
       "!outline-1 !outline-solid !outline-field":
@@ -53,6 +43,11 @@ function TextField({
     }
   };
 
+  const handleInput = (e) => {
+    // Check br tag on delete all contents
+    if (e.target.innerHTML === "<br>") e.target.innerHTML = "";
+  };
+
   return (
     <section onFocus={handleFocus} onBlur={handleBlur} className="relative">
       <ToolBar handleFormatText={handleFormatText} isActive={isActive} />
@@ -65,6 +60,7 @@ function TextField({
         contentEditable
         aria-multiline
         role="textbox"
+        onInput={handleInput}
         {...props}
       ></div>
     </section>
