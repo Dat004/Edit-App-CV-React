@@ -6,7 +6,6 @@ import ToolBar from "./ToolBar";
 function TextField({
   className,
   isFocus = false,
-  simpleFocus = false,
   placeholder = "Enter",
   ...props
 }) {
@@ -14,11 +13,10 @@ function TextField({
   const textFieldRef = useRef(null);
 
   const textFieldClasses = classNames(
-    "inline-block w-full text-[100%] group-hover/field:bg-field",
+    "text-[100%] group-hover/field:bg-field focus:text-primary-text",
     {
       [className]: className,
-      "!outline-1 !outline-solid !outline-field":
-        isFocus || (isActive && simpleFocus),
+      "!outline-1 !outline-solid !outline-field": isFocus || isActive,
       "bg-white mx-[-6px] px-[6px]": isActive,
       "mx-[-3%] px-[3%]": !isActive,
     }

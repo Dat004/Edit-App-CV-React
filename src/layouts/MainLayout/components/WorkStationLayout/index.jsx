@@ -1,9 +1,10 @@
 import { useState } from "react";
 import TextFieldWrapper from "../../../../components/TextField/TextFieldWrapper";
-import TextField from "../../../../components/TextField";
 
 function WorkStation() {
-  const [profile, setNameProfile] = useState("Nguyen Van A - Frontend Development");
+  const [profile, setNameProfile] = useState(
+    "Nguyen Van A - Frontend Development"
+  );
 
   const handleChangeNameProfile = (e) => {
     setNameProfile(e.target.value);
@@ -30,9 +31,12 @@ function WorkStation() {
                 <section className="relative">
                   {/* Start Pages */}
                   <section className="bg-white w-[595px] p-[22px] mt-[20px] mx-auto">
-                    <TextFieldWrapper secondTitle>
-                      <TextField placeholder="Vị trí ứng tuyển" simpleFocus />
-                    </TextFieldWrapper>
+                    <TextFieldWrapper
+                      placeholder="Vị trí ứng tuyển"
+                      type="awards"
+                      theme="vibes"
+                      secondTitle
+                    />
                   </section>
                   {/* End Page */}
                 </section>

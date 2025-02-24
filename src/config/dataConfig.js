@@ -24,12 +24,71 @@ import enfoldTemplate from "../assets/images/templates/enfold.png";
 import messageTemplate from "../assets/images/templates/message.png";
 import newsweekTemplate from "../assets/images/templates/newsweek.png";
 
+import images from "../assets/images";
 import {
   BoldTextFormatIcon,
   UnderlineTextFormatIcon,
   ItalicTextFormatIcon,
   ListTextFormatIcon,
 } from "../icons";
+
+export const titleTypeDataConfig = [
+  {
+    id: 1,
+    type: "overview",
+    icon: images.introductionIcon,
+  },
+  {
+    id: 2,
+    type: "working-experience",
+    icon: images.experienceIcon,
+  },
+  {
+    id: 3,
+    type: "education",
+    icon: images.educationIcon,
+  },
+  {
+    id: 4,
+    type: "skills",
+    icon: images.skillsIcon,
+  },
+  {
+    id: 5,
+    type: "activities",
+    icon: images.activitiesIcon,
+  },
+  {
+    id: 6,
+    type: "projects",
+    icon: images.experienceIcon,
+  },
+  {
+    id: 7,
+    type: "languages",
+    icon: images.languagesIcon,
+  },
+  {
+    id: 8,
+    type: "awards",
+    icon: images.awardsIcon,
+  },
+  {
+    id: 9,
+    type: "certificates",
+    icon: images.certificatesIcon,
+  },
+  {
+    id: 10,
+    type: "objective",
+    icon: images.introductionIcon,
+  },
+  {
+    id: 11,
+    type: "contact-information",
+    icon: images.contactInformationIcon,
+  },
+];
 
 export const formatTextConfig = [
   {
